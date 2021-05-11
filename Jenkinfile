@@ -27,7 +27,7 @@ pipeline {
                     
                     stage('Run MATLAB Test') {
                         steps {
-                            runMATLABTests(testResultsJUnit: 'test-result/result.xml')
+                            runMATLABTests(testResultsJUnit: 'test-result/result.xml', sourceFolder: ['src'])
                         }
                     }
                 }
