@@ -10,6 +10,7 @@ suite = testsuite(pwd, 'IncludeSubfolders', true);
 
 runner = TestRunner.withTextOutput('OutputDetail', Verbosity.Detailed );
 runner.addPlugin(XMLPlugin.producingJUnitFormat('matlabTestArtifacts/junittestresults.xml'));
+runner.addPlugin(CodeCoveragePlugin.forFolder({'src/folderA', 'src/folderB'}, 'IncludingSubfolders', true, 'Producing', CoberturaFormat('matlabTestArtifacts/cobertura.xml')));
 
 results = runner.run(suite);
 
