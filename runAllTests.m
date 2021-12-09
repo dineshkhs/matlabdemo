@@ -18,6 +18,6 @@ runner.addPlugin(CodeCoveragePlugin.forFolder({'src/folderA', 'src/folderB'}, 'I
 results = runner.run(suite);
 
 % Generate Zip files
-zip('myfiles.zip','myfolder');
+zip('covReport.zip','covReport');
 nfailed = nnz([results.Failed]);
 assert(nfailed == 0, [num2str(nfailed) ' test(s) failed.']);
