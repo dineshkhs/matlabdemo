@@ -5,6 +5,7 @@ import matlab.unittest.plugins.TestReportPlugin;
 import matlab.unittest.plugins.CodeCoveragePlugin;
 import matlab.unittest.plugins.codecoverage.CoverageReport;
 import matlab.unittest.plugins.TAPPlugin;
+import matlab.unittest.plugins.ToFile;
 
 addpath(genpath('src'));
 
