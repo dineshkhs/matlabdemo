@@ -15,7 +15,6 @@ suite = testsuite(pwd, 'IncludeSubfolders', true);
 
 runner = TestRunner.withTextOutput('OutputDetail', Verbosity.Detailed );
 runner.addPlugin(TestReportPlugin.producingHTML('testReport'));
-runner.addPlugin(TestReportPlugin.producingPDF('matlabTestArtifacts/testreport.pdf'));
 runner.addPlugin(TAPPlugin.producingVersion13(ToFile('matlabTestArtifacts/taptestresults.tap')));
 runner.addPlugin(XMLPlugin.producingJUnitFormat('matlabTestArtifacts/junittestresults.xml'));
 runner.addPlugin(CodeCoveragePlugin.forFolder({'src/folderA', 'src/folderB'}, 'IncludingSubfolders', true, 'Producing', CoverageReport('covReport', ...
